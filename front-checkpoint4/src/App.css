@@ -1,10 +1,4 @@
-.app-container {
-  margin-top: 10vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
+
 .selected-popup {
 display:flex;
 flex-direction: column;
@@ -32,14 +26,9 @@ justify-content: center;
     flex-wrap: wrap;
   
 }
-.champion-name {
-  margin-bottom: 1vh;
-  font-size: 22px;
-  color: gold;
-  list-style: none;
-}
+
 body {
-  background-color: rgb(47, 47, 117);
+  background-color:  rgb(47, 47, 117);
 }
 .search-container {
   margin-top : 10vh;
@@ -96,15 +85,6 @@ color:gold;
   font-style: italic;
   line-height: 1.5;
 }
-/* .champion-spells {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  padding: 20px;
-  font-size: 22px;
- 
-} */
 .champion-spell-name-1 {
   text-align: left;
 height: fit-content;
