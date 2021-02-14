@@ -141,7 +141,7 @@ const Amumu = {
           id: "AuraofDespair",
           name: "Désespoir",
           description:
-            "Saisis par l'angoisse, les ennemis proches perdent chaque seconde un pourcentage de leurs PV max et leurs <font color='#9b0f5f'>Malédictions</font> sont actualisées.",
+            "Saisis par l'angoisse, les ennemis proches perdent chaque seconde un pourcentage de leurs PV max et leurs Malédictions sont actualisées.",
           tooltip:
             '<spellPassive>Activable/Désactivable : </spellPassive>Amumu pleure, actualisant les <span class="color9b0f5f">Malédictions</span> sur les ennemis proches et infligeant des dégâts magiques équivalents à {{ e2 }} plus {{ e1 }} <scaleAP>(+{{ a1 }})</scaleAP>% de leurs PV max chaque seconde.',
           leveltip: {
@@ -266,7 +266,7 @@ const Amumu = {
           id: "CurseoftheSadMummy",
           name: "Malédiction d'Amumu",
           description:
-            "Amumu emmêle les ennemis proches dans des bandelettes, appliquant sa <font color='#9b0f5f'>Malédiction</font>, leur infligeant des dégâts et les empêchant d'attaquer et de se déplacer.",
+            "Amumu emmêle les ennemis proches dans des bandelettes, appliquant sa Malédiction, leur infligeant des dégâts et les empêchant d'attaquer et de se déplacer.",
           tooltip:
             'Amumu entrave les unités ennemies proches, infligeant {{ rcalculateddamage }} pts de dégâts magiques et appliquant <span class="color9b0f5f">Malédiction</span>. Les ennemis touchés ne peuvent pas attaquer ou se déplacer pendant {{ rduration }} sec.',
           leveltip: {
@@ -321,7 +321,7 @@ const Amumu = {
       passive: {
         name: "Toucher maudit",
         description:
-          "Les attaques de base d'Amumu <font color='#9b0f5f'>maudissent</font> ses ennemis, leur faisant subir des dégâts bruts supplémentaires chaque fois qu'ils subissent des dégâts magiques.",
+          "Les attaques de base d'Amumu maudissent ses ennemis, leur faisant subir des dégâts bruts supplémentaires chaque fois qu'ils subissent des dégâts magiques.",
         image: {
           full: "Amumu_Passive.png",
           sprite: "passive0.png",

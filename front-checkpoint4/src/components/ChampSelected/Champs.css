@@ -1,0 +1,96 @@
+.champ-main-title {
+    font-size: 38px;
+    text-align: center;
+    padding-top: 8vh;
+    margin-bottom: -8vh;
+    color: gold;
+    font-style: italic;
+    font-family: 'Quintessential', cursive;
+}
+.champion-infos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    height:fit-content;
+    width: 100vw;
+    font-family: 'Quintessential', cursive;
+}
+.gold {
+    color: gold;
+}
+.champion-text {
+    margin-top: -10vh;
+    width: 60vw;
+    font-size: 28px;
+    color: rgba(245, 245, 245, 0.856);
+    font-style: italic;
+    font-family: 'Quintessential', cursive;
+    text-align: center;
+}
+.tags {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.tips {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+  
+}
+.partype {
+  font-size: 28px;
+  color: gold;
+  text-align: center;
+}
+.champion-tags {
+  font-size: 22px;
+  color: rgba(245, 245, 245, 0.856);
+  text-align: center;
+
+}
+.champion-allytips {
+   width: 35vw;
+   margin-right: 10vw;
+   font-size: 22px;
+   color: rgba(245, 245, 245, 0.856);
+}
+.champion-enemytips {
+   width: 35vw;
+   margin-left: 10vw;
+   font-size: 22px;
+   color: rgba(245, 245, 245, 0.856);
+}
+.champion-spells {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   
+}
+.spell-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 600px;
+    width: 15vw;
+    margin: 20px;
+    background-color: black;
+    opacity: 0.85;
+    padding: 20px;
+    border-radius: 15px;
+}
+.spell-description {
+    width: 15vw;
+    font-size: 22px;
+    color: rgba(245, 245, 245, 0.856);
+    margin-left: 2vw;
+}
+.spell-name {
+    font-size: 26px;
+    color: gold;
+    text-align: center;
+}

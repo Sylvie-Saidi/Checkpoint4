@@ -25,13 +25,13 @@ function ChampionsView() {
   const renderObject = Object.entries(myChampions).map(([key, value]) => {
     return (
       <div className="app-container">
-        {/* <Router> */}
+       
         <div
           onClick={function handleSelect() {
             setSelectedChamp(key);
            }} >
           <div className="champion-container" key={key}>
-            <Link to={"/"+key}>
+            <Link className="links" to={"/"+key}>
               <p className="champion-name">{value.name}</p>
               <img
                 src={require('../../Assets/img/champion/loading/'+`${key}`+"_0.jpg").default}/>
@@ -39,7 +39,7 @@ function ChampionsView() {
           </div>
         </div>
          
-        {/* </Router> */}
+      
         </div>
     );
   });
