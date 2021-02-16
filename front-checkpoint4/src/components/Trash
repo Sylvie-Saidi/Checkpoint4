@@ -1,0 +1,49 @@
+
+var xmlHttp = new XMLHttpRequest();
+ xmlHttp.open( "GET",'http://ddragon.leagueoflegends.com/cdn/11.3.1/data/fr_FR/champion.json'
+ , false ); // false for synchronous request
+ xmlHttp.send( null );
+ const json = JSON.parse(xmlHttp.responseText);
+ const myChampions = json.data;
+
+
+ 
+ 
+      var xmlHttp2 = new XMLHttpRequest();
+      xmlHttp2.open( "GET",'http://ddragon.leagueoflegends.com/cdn/11.3.1/data/fr_FR/'+`${selectedChamp}`+'.json'
+      , false ); // false for synchronous request
+      xmlHttp2.send( null );
+      const json2 = JSON.parse(xmlHttp2.responseText);
+      const mySelectedChampions = json2.data;
+
+  
+
+  return(
+    <div>
+      <Router>
+     
+       <Navbar />
+         <div className= "search-container">
+            <form onClick= {handleClick}>
+              <input  className="search" type="text" placeholder="Rechercher un champion" value={searchChamp} onChange={handleChange}/>
+            </form>
+               <ul className="">
+                {searchResults.slice(0,8).map(item  =>(
+                 <Link to={searchChamp}><li  className={clicked ? 'search-list-view' : 'search-list-none'}> {item} </li></Link> 
+                ))
+                }
+            </ul>
+        </div>
+          <div className="app-container">
+         {renderObject}
+         </div>
+         <div>
+        <Switch>
+        <Route to={selectedChamp}>   
+         {renderSelected} 
+       </Route>
+      </Switch>
+    </div>
+    </Router>
+    </div>
+  );

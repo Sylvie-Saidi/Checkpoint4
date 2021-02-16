@@ -1,0 +1,20 @@
+
+  .champion-container {
+    width: fit-content;
+    margin-top: 5vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .champion-name {
+    font-family: 'Quintessential', cursive;
+    margin-bottom: 1vh;
+    font-size: 28px;
+    color: gold;
+    list-style: none;
+    text-align: center;
+  }
+  .links {
+    text-decoration: none;
+  }
