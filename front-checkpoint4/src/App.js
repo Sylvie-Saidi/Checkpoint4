@@ -3,6 +3,7 @@ import './App.css';
 import Navbar from './components/Navbar/Navbar' ;
 import React from 'react';
 import { BrowserRouter as Router , Route , Switch} from 'react-router-dom';
+import Login from './components/Login/Login';
 import ChampionsView from './components/Champions/ChampionsView'
 import Ahri from './components/ChampSelected/Ahri';
 import Aatrox from './components/ChampSelected/Aatrox';
@@ -19,6 +20,7 @@ function App() {
        
       <Navbar />
       <Switch>
+      <Route path="/login" component={Login} />
       <Route exact path ="/" component={ChampionsView } />
       <Route path="/Aatrox" component={Aatrox} />
       <Route path="/Ahri" component={Ahri} />

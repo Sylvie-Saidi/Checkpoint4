@@ -2,7 +2,7 @@ import React from 'react';
 import Logo from '../../Assets/logo.png'
 import './Navbar.css';
 import { Link } from 'react-router-dom';
-
+// import Search from '../SearchBar/Search';
 
 
  export default function Navbar() {
@@ -10,7 +10,11 @@ import { Link } from 'react-router-dom';
     return(
         <div className="navbar-container">
            <a href="#"><img className="logo" src={Logo} /></a>
-           <Link to="/" className="nav-links"><h1 className="gallery">Galerie</h1></Link>
+           <Link to="/" className="nav-links"><h1 className="nav-section">Galerie</h1></Link>
+           <Link to="/login" className="nav-links"><h1 className="nav-section">Connexion</h1></Link>
+           {/* <div>
+              <Search />
+           </div> */}
         </div>
     );
  }
