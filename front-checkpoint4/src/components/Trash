@@ -23,17 +23,7 @@ var xmlHttp = new XMLHttpRequest();
       <Router>
      
        <Navbar />
-         <div className= "search-container">
-            <form onClick= {handleClick}>
-              <input  className="search" type="text" placeholder="Rechercher un champion" value={searchChamp} onChange={handleChange}/>
-            </form>
-               <ul className="">
-                {searchResults.slice(0,8).map(item  =>(
-                 <Link to={searchChamp}><li  className={clicked ? 'search-list-view' : 'search-list-none'}> {item} </li></Link> 
-                ))
-                }
-            </ul>
-        </div>
+        
           <div className="app-container">
          {renderObject}
          </div>

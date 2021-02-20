@@ -1,33 +1,64 @@
+import React, {useEffect , useState} from 'react';
+import champions from '../ChampionsData/Champions';
+import { Link } from 'react-router-dom';
+import './Search.css';
 
 
 
 
+function Search() {
 
-
-
-
-const [searchChamp , setSearchChamp ] =useState("");
-const [searchResults , setSearchResults] = useState([]);
- 
+const [searchTerm, setSearchTerm] = useState("");
+const [searchResults, setSearchResults] = useState([]); 
+const [clicked , setClicked] = useState(false);
+const myChampions = champions.data
+const handleClick = () => {
+  setClicked(!clicked);
+}
 const handleChange = event => {
-    setSearchChamp(event.target.value);
+   
+   setSearchTerm(event.target.value);
+ };
+
+ const filter = searchResults.slice(0,5) ;
+
+useEffect(() => {
+   const results = Object.entries(myChampions).map(([key, value]) =>value.id).filter( champ =>
+       champ.toLowerCase().includes(searchTerm) 
+            );
+      setSearchResults(results);
+
+ }, [searchTerm]);
+
+ return (
+<div>
+  <h1 className="select-champ">Sélectionnez votre champion pour accéder à sa page dédiée</h1>
+
+   <div className="search-container" >
+     <input className="search"
+       type="text"
+       placeholder="Rechercher un champion"
+       value={searchTerm}
+       onChange={handleChange}
+       onClick={handleClick}
+      
+       />
+       {
+        filter.map(item => (
+      
+      <div className="filter-results">
+    <Link className="filter-links" to={"/"+ item }>   
+     <p className="filter-items">{item}</p>
+    <img src={require('../../Assets/img/champion/loading/'+`${item}`+"_0.jpg").default}/>
+    </Link> 
+     </div>
+    ))
+        }
+
+    
+     </div>
+     </div>
+ );
 }
-useEffect(()=> {
-    const results = Object.entries(myChampions).map(([key , value])=> value.name).filter( champ =>
-    champ.toLowerCase().includes(searchChamp) 
-         );
-    setSearchResults(results);
-  
-}, [searchChamp]);
-const searchClick = () => {
-  <div  onClick={function handleSelect() {
-    setSelectedChamp(searchChamp)
-} }>
-  <ul className="champion-container" key={searchChamp} >
-   <Link to={searchChamp}> <li className="champion-name">{searchChamp}</li>
-    {/* <p className="champion-text">{value.blurb}</p> */}
-    <img  src={"http://ddragon.leagueoflegends.com/cdn/img/champion/loading/"+`${searchChamp}`+"_0.jpg"}/>
-    </Link>
-  </ul>
-  </div>
-}
+
+export default Search ;

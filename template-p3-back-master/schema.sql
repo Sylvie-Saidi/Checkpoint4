@@ -1,0 +1,12 @@
+DROP DATABASE checkpoint4 ;
+
+CREATE DATABASE checkpoint4 ;
+
+USE checkpoint4 ;
+
+CREATE TABLE user 
+(
+    id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    name VARCHAR(100) NOT NULL UNIQUE ,
+    password VARCHAR(100) NOT NULL 
+);

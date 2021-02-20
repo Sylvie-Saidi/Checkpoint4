@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import champions from "../ChampionsData/Champions";
 import './ChampionsView.css';
 import { Link } from 'react-router-dom';
+import Search from '../SearchBar/Search';
 
 
 
@@ -46,8 +47,13 @@ function ChampionsView() {
 
  
   return(
-          <div className="champion-container">
+         <div>
+            <div>
+                 <Search />
+                 </div>
+                  <div className="champion-container">
                  {renderObject}
+          </div>
           </div>
           
 );
